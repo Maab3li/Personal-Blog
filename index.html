@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Maab3li's Blog</title>
+</head>
+
+<body>
+    <header class="bg-[#f2fdfa] w-[100%] h-14">
+        <span id="span" class="font-tangerine text-[#8b7b2d] p-5">Maab3li's Blog</span>
+    </header>
+    <main class="flex justify-center items-center">
+        <select class="flex w-[90%] p-2 mt-4 border-[1px] border-gray rounded-lg" onchange="handleCategoryChange(this.value)">
+            <option class="p-1" value="allPosts">
+                Select Posts' Category...
+            </option>
+            <option class="p-1" value="tech">
+                Tech
+            </option>
+            <option class="p-1" value="food">
+                Food
+            </option>
+            <option class="p-1" value="travel">
+                Travel
+            </option>
+            <option class="p-1" value="drink">
+                Drink
+            </option>
+        </select>
+
+    </main>
+    <div id="cards-container" class="flex flex-col justify-center items-center w-[100%] mt-10 ml-[5%] md:grid md:grid-cols-2"></div>
+    <div id="page-change-btns" class="flex justify-center">
+        <button onclick="navToPrev()">&#10094</button>
+        <button onclick="navToNext()" class="pl-5">&#10095</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
